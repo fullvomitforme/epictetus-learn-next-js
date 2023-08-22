@@ -1,0 +1,34 @@
+import PostMetaTitle from '@/Components/PostMetaTitle';
+import PostAuthor from '@/Components/PostAuthor';
+
+const InfoPost = ({
+	category,
+	date,
+	title,
+	shortDescription,
+	authorAvatar,
+	authorName,
+	authorJob,
+}: {
+	category: string;
+	date: string;
+	title: string;
+	shortDescription: string;
+	authorAvatar: string;
+	authorName: string;
+	authorJob: string;
+}) => {
+	return (
+		<>
+			<PostMetaTitle category={category} date={date} title={title} center />
+			<p className='text-white/60 mt-5 w-10/12'>{shortDescription}</p>
+			<PostAuthor
+				authorAvatar={authorAvatar}
+				authorName={authorName}
+				authorJob={authorJob}
+			/>
+		</>
+	);
+};
+
+export default InfoPost;
