@@ -3,8 +3,8 @@ import InfoPost from './InfoPost';
 const FeaturedPost = () => {
 	return (
 		<article>
-			<div className='flex -mx-4 items-center'>
-				<div className='px-4 w-8/12'>
+			<div className='flex -mx-4 items-center flex-wrap'>
+				<div className='px-4 lg:w-8/12 md:w-7/12 w-full'>
 					<Image
 						src={'/featured-thumbnail.png'}
 						alt='Thumbnail 1'
@@ -15,7 +15,7 @@ const FeaturedPost = () => {
 						placeholder='blur' // Optional blur-up while loading
 					/>
 				</div>
-				<div className='w-4/12 px-4'>
+				<div className='lg:w-4/12 md:w-5/12 w-full px-4'>
 					<InfoPost
 						category='UI Design'
 						date='Jun 2023'

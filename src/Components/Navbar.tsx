@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { useState } from 'react';
+import Container from '@/Components/Container';
 
 const Navbar = () => {
 	const [dropdown, setDropdown] = useState(false);
@@ -38,15 +39,15 @@ const Navbar = () => {
 
 	return (
 		<nav className='py-10'>
-			<div className='container mx-auto'>
+			<Container>
 				<div className='flex items-center'>
 					<div className='w-2/12 flex items-center'>
 						<div className='w-10 h-10 bg-gray-700 rounded flex items-center justify-center mr-4 shadow-2xl'>
 							😡
 						</div>
-						marahmarahstore
+						marahstudios
 					</div>
-					<div className='w-8/12'>
+					<div className='w-7/12'>
 						<ul className='space-x-10 flex items-center'>
 							<li>
 								<Link className='hover:underline' href={'/'}>
@@ -106,14 +107,14 @@ const Navbar = () => {
 							</li>
 						</ul>
 					</div>
-					<div className='w-2/12'>
+					<div className='w-3/12'>
 						<input
 							className='bg-gray-700 py-4 px-6 w-full rounded-full bg-search pl-12'
 							placeholder='Search ...'
 						/>
 					</div>
 				</div>
-			</div>
+			</Container>
 		</nav>
 	);
 };
