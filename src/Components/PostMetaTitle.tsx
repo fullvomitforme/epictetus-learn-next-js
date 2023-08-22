@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 const PostMetaTitle = ({
 	category,
 	date,
@@ -7,7 +9,7 @@ const PostMetaTitle = ({
 	category: string;
 	date: string;
 	title: string;
-	center: any;
+	center?: boolean;
 }) => {
 	return (
 		<div>
@@ -16,9 +18,8 @@ const PostMetaTitle = ({
 				<span>&bull;</span>
 				<div>{date}</div>
 			</div>
-			<h2 className={`text-2xl mt-4 ${center ? 'text-center' : ''}`}>
-				{/* <h2 className={`text-2xl mt-4 ${center ? `text-center` : ``}`}> */}
-				{title}
+			<h2 className={`text-2xl mt-4 ${center ? 'text-center' : ' '}`}>
+				<Link href={'/detail'}>{title}</Link>
 			</h2>
 		</div>
 	);

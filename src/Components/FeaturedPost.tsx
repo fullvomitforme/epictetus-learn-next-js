@@ -3,14 +3,14 @@ import InfoPost from './InfoPost';
 const FeaturedPost = () => {
 	return (
 		<article>
-			<div className='flex -mx-4 items-center flex-wrap'>
+			<div className='flex -mx-4 lg:items-center items-start flex-wrap'>
 				<div className='px-4 lg:w-8/12 md:w-7/12 w-full'>
 					<Image
 						src={'/featured-thumbnail.png'}
 						alt='Thumbnail 1'
 						width={'1080'}
 						height={'1080'}
-						className='rounded-xl w-full'
+						className='rounded-xl w-full mb-4 md:mb-0'
 						blurDataURL='data:...' // automatically provided
 						placeholder='blur' // Optional blur-up while loading
 					/>
@@ -27,6 +27,7 @@ const FeaturedPost = () => {
 					/>
 				</div>
 			</div>
+			<hr className='border-white/10 mt-10 md:hidden' />
 		</article>
 	);
 };
